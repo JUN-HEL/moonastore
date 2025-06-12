@@ -1,0 +1,383 @@
+/* Root variables */
+:root {
+  --bg-light: #fff0f6;
+  --text-light: #333;
+  --bg-dark: #1f1f1f;
+  --text-dark: #f5f5f5;
+  --primary: #ff8ec7;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark header {
+  background: linear-gradient(to right, #333, #444);
+}
+
+body.dark .cta-button {
+  background-color: var(--primary);
+}
+
+body.dark .product-card,
+body.dark .testimonials blockquote,
+body.dark .upi-section,
+body.dark footer {
+  background-color: #2e2e2e;
+  color: var(--text-dark);
+}
+
+body.dark .section-heading,
+body.dark .product-title {
+  color: var(--text-dark);
+}
+
+/* Links */
+a {
+  color: #ff70b8;
+  text-decoration: none;
+}
+
+/* Dark mode toggle button */
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+  color: #fff;
+}
+
+/* Call to action button */
+.cta-button {
+  background-color: #ff8ec7;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Steps */
+.steps {
+  text-align: left;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  background-color: #ffe6f0;
+  border-left: 5px solid #ff8ec7;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Products section */
+.products-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 0 1rem;
+}
+
+/* Product card */
+.product-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 142, 199, 0.6);
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Product title */
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+/* DM TO BUY button */
+.dm-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 24px;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(255, 142, 199, 0.5);
+  text-decoration: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dm-btn:hover {
+  background-color: #ff70b8;
+  box-shadow: 0 6px 12px rgba(255, 142, 199, 0.7);
+}
+
+/* Dark mode styles for products */
+body.dark .products-section {
+  background-color: #2e2e2e;
+  color: var(--text-dark);
+}
+
+body.dark .product-card {
+  background-color: #3a3a3a;
+  box-shadow: 0 2px 8px rgba(255 142 199 / 0.3);
+}
+
+body.dark .product-card:hover {
+  box-shadow: 0 8px 20px rgba(255 142 199, 0.8);
+}
+
+body.dark .product-title {
+  color: var(--text-dark);
+}
+
+body.dark .dm-btn {
+  background-color: #ff8ec7;
+  box-shadow: 0 4px 8px rgba(255, 142, 199, 0.8);
+  color: #fff;
+}
+
+body.dark .dm-btn:hover {
+  background-color: #ff70b8;
+  box-shadow: 0 6px 12px rgba(255, 142, 199, 1);
+}
+
+/* UPI payment section */
+.upi-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto 4rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.upi-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.upi-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.upi-content {
+  padding: 0 1rem;
+}
+
+.upi-qr {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.upi-step {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Dark mode for UPI */
+body.dark .upi-section {
+  background-color: #2e2e2e;
+  color: var(--text-dark);
+  box-shadow: 0 2px 10px rgba(255 142 199 / 0.3);
+}
+
+body.dark .upi-heading {
+  color: var(--text-dark);
+}
+
+body.dark .upi-step {
+  color: var(--text-dark);
+}
+
+/* Footer */
+footer {
+  background-color: #fceaff;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark footer {
+  background-color: #2e2e2e;
+  color: var(--text-dark);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .upi-section {
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+
+  .upi-qr {
+    width: 120px;
+    height: 120px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .product-image {
+    height: 120px;
+  }
+
+  .product-title {
+    font-size: 0.95rem;
+  }
+
+  .products-grid {
+    gap: 15px;
+  }
+  
+  .section-heading {
+    font-size: 1.4rem;
+  }
+}
