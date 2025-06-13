@@ -10,22 +10,37 @@ if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark');
 }
 
-// Reveal on scroll (Products & UPI)
+// Reveal entire sections (products-section & upi-section)
 const revealSections = document.querySelectorAll('.products-section, .upi-section');
-
-const observer = new IntersectionObserver((entries) => {
+const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
     }
   });
 });
+revealSections.forEach(section => sectionObserver.observe(section));
 
-revealSections.forEach(section => observer.observe(section));
+// Animate each product card individually on scroll
+const productCards = document.querySelectorAll('.product-card');
+const cardObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1
+});
+productCards.forEach(card => cardObserver.observe(card));
 
-// Preloader
+// Preloader (if you have a loader element with ID 'loader')
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
-  loader.style.opacity = '0';
-  setTimeout(() => loader.style.display = 'none', 500);
+  if (loader) {
+    loader.style.opacity = '0';
+    setTimeout(() => loader.style.display = 'none', 500);
+  }
 });
+  
