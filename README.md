@@ -31,15 +31,24 @@ Moonastore_84 is a stylish, minimal e-commerce landing page built with HTML, CSS
 
 ## 📁 Folder Structure
 
-├── index.html
+├── index.html 
+
 ├── style.css
+
 ├── script.js
+
 ├── assets/
+
 │ ├── images/
+
 │ │ ├── bouquet.jpg
+
 │ │ ├── hairclip.jpg
+
 │ │ └── ...
+
 │ └── icons/
+
 │ └── instagram.png
 
 
@@ -67,4 +76,4 @@ This project is free to use for personal or educational purposes.
 
 ---
 
-> Made Jun
+> Made by Jun
