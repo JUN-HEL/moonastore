@@ -221,6 +221,11 @@ section {
     box-shadow: 0 4px 8px rgba(255, 142, 199, 0.5);
     text-decoration: none;
     transition: background-color 0.3s, box-shadow 0.3s;
+}.product-price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
+    margin: 8px 0;
 }
 
 .dm-btn:hover {
@@ -233,6 +238,10 @@ body.dark .products-section {
     background-color: #2e2e2e;
     color: var(--text-dark);
     box-shadow: 0 2px 10px rgba(255 142 199 / 0.3);
+}
+
+body.dark .product-price {
+    color: var(--text-dark);
 }
 
 body.dark .section-heading {
