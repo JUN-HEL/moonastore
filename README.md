@@ -57,7 +57,7 @@ Moonastore_84 is a stylish, minimal e-commerce landing page built with HTML, CSS
 ## 🚀 How to Run
 
 1. Clone or download this repository.
-2. Open `index.html` in any modern browser.
+2. Open `index.html` in any modern browser.(or you can use this link to open http://playful-toffee-b3aaf0.netlify.app)
 3. Click the 🌙 icon to toggle dark mode.
 4. Use the **DM TO BUY** button or scan UPI QR to make payments.
 
@@ -75,5 +75,5 @@ Moonastore_84 is a stylish, minimal e-commerce landing page built with HTML, CSS
 This project is free to use for personal or educational purposes.
 
 ---
-
+HOSTED ON NETLIFY: http://playful-toffee-b3aaf0.netlify.app
 > Made by Jun
